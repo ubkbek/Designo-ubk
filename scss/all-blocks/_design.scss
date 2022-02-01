@@ -1,0 +1,203 @@
+.design {
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 160px;
+        color: $white;
+    }
+
+    &__left {
+        padding: 273px 136px;
+        background-color: #ccc;
+        background-image: url("./../../images/web-disign.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        object-position: center;
+        background-size: cover;
+        border-radius: 15px;
+        color: $white;
+        position: relative;
+        &:hover{
+            &::before{
+                content: "";
+                position: absolute;
+                display: inline-block;
+                top: 0;
+                left: 0;
+                border-radius: 15px;
+                opacity: 0.5;
+                width: 541px;
+                height: 640px;
+                background-color: $peach;
+            }
+        }
+
+    }
+
+    &__heading {
+        text-align: center;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: 2px;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        text-align: center;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+    }
+
+    &__item {
+        border-radius: 15px;
+        background-repeat: no-repeat;
+        object-position: center;
+        background-size: cover;
+        object-position: bottom;
+    }
+
+    &__item + &__item{
+        margin-top: 24px;
+    }
+
+    &__item1 {
+        padding: 107px 143px;
+        background-image: url("./../../images/app-design.jpg");
+    }
+
+    &__item2 {
+        padding: 107px 88px;
+        background-image: url("./../../images/graphic-design.jpg");
+    }
+
+    // tablet devices
+    @media only screen and (max-width:1150px) {
+        margin-bottom: 120px;
+
+        &__container{
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__left{
+            padding: 53px 210px;
+            width: 100%;
+        }
+
+        &__heading {
+            text-align: center;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 48px;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+        }
+
+        &__text {
+            text-align: center;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 22px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            // align-items: center;
+        }
+
+
+        &__item {
+            margin-top: 25px;
+        }
+
+        &__item1 {
+            padding: 53px 217px;
+            background-image: url("./../../images/app-design.jpg");
+        }
+
+        &__item2 {
+            padding: 53px 162px;
+            background-image: url("./../../images/graphic-design.jpg");
+        }
+    }
+
+
+    // mobile devices
+
+    @media only screen and (max-width:660px) {
+
+        &__left{
+            padding: 90px 56px;
+            &::before{
+                display: none;
+            }
+        }
+
+        &__item1{
+            padding: 90px 56px;
+        }
+
+        &__item2{
+            padding: 90px 36px;
+        }
+
+        &__heading{
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 36px;
+            text-align: center;
+            letter-spacing: 1.4px;
+            margin-bottom: 12px;
+        }
+
+        &__text{
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 22px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+    .design{
+        &__left {
+            background-image: url("./../../images/web-disign.jpg") 1x, url("./../../images/web-disign@2x.jpg"), 2x;
+        }
+
+        &__item1 {
+            background-image: url("./../../images/app-design.jpg") 1x, url("./../../images/app-design@2x.jpg") 2x;
+        }
+
+        &__item2 {
+            background-image: url("./../../images/graphic-design.jpg") 1x, url("./../../images/graphic-design@2x.jpg") 2x;
+        }
+    }
+
+}
