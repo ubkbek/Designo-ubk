@@ -1,5 +1,6 @@
 .hero {
     margin-bottom: 180px;
+    padding-top: 154px;
 
     &__container {
         background-color: $peach;
@@ -67,6 +68,7 @@
 
     // mobile devices
     @media only screen and (max-width:640px) {
+        padding-top: 98px;
         .container{
             padding-left: 0;
             padding-right: 0;

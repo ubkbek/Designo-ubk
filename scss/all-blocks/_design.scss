@@ -1,17 +1,17 @@
 .design {
+    margin-bottom: 160px;
 
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 160px;
         color: $white;
     }
 
     &__left {
         padding: 273px 136px;
         background-color: #ccc;
-        background-image: url("./../../images/web-disign.jpg");
+        background-image: url("./../images/web-disign.jpg");
         background-repeat: no-repeat;
         background-position: center;
         object-position: center;
@@ -19,21 +19,25 @@
         border-radius: 15px;
         color: $white;
         position: relative;
-        &:hover{
-            &::before{
-                content: "";
-                position: absolute;
-                display: inline-block;
-                top: 0;
-                left: 0;
-                border-radius: 15px;
-                opacity: 0.5;
-                width: 541px;
-                height: 640px;
-                background-color: $peach;
-            }
-        }
+    }
 
+    &__item{
+        position: relative;
+    }
+
+    &__box{
+        &:hover::before{
+            content: "";
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            left: 0;
+            border-radius: 15px;
+            opacity: 0.5;
+            width: 100%;
+            height: 100%;
+            background-color: $peach;
+        }
     }
 
     &__heading {
@@ -74,12 +78,12 @@
 
     &__item1 {
         padding: 107px 143px;
-        background-image: url("./../../images/app-design.jpg");
+        background-image: url("./../images/app-design.jpg");
     }
 
     &__item2 {
         padding: 107px 88px;
-        background-image: url("./../../images/graphic-design.jpg");
+        background-image: url("./../images/graphic-design.jpg");
     }
 
     // tablet devices
@@ -130,12 +134,12 @@
 
         &__item1 {
             padding: 53px 217px;
-            background-image: url("./../../images/app-design.jpg");
+            background-image: url("./../images/app-design.jpg");
         }
 
         &__item2 {
             padding: 53px 162px;
-            background-image: url("./../../images/graphic-design.jpg");
+            background-image: url("./../images/graphic-design.jpg");
         }
     }
 
@@ -188,15 +192,15 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
     .design{
         &__left {
-            background-image: url("./../../images/web-disign.jpg") 1x, url("./../../images/web-disign@2x.jpg"), 2x;
+            background-image: url("./../../images/web-disign.jpg") 1x, url("./../images/web-disign@2x.jpg"), 2x;
         }
 
         &__item1 {
-            background-image: url("./../../images/app-design.jpg") 1x, url("./../../images/app-design@2x.jpg") 2x;
+            background-image: url("./../../images/app-design.jpg") 1x, url("./../images/app-design@2x.jpg") 2x;
         }
 
         &__item2 {
-            background-image: url("./../../images/graphic-design.jpg") 1x, url("./../../images/graphic-design@2x.jpg") 2x;
+            background-image: url("./../../images/graphic-design.jpg") 1x, url("./../images/graphic-design@2x.jpg") 2x;
         }
     }
 

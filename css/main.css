@@ -432,6 +432,12 @@ img {
 
 .header {
   margin-bottom: 5px;
+  position: fixed;
+  width: 100vw;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 10px #ccc;
+          box-shadow: 0 1px 10px #ccc;
+  z-index: 9999999;
 }
 
 .header__container {
@@ -503,6 +509,9 @@ img {
 }
 
 @media only screen and (max-width: 700px) {
+  .header__container {
+    padding: 35px 0 37px 0;
+  }
   .header__nav {
     display: none;
   }
@@ -513,6 +522,7 @@ img {
 
 .hero {
   margin-bottom: 180px;
+  padding-top: 154px;
 }
 
 .hero__container {
@@ -573,6 +583,9 @@ img {
 }
 
 @media only screen and (max-width: 640px) {
+  .hero {
+    padding-top: 98px;
+  }
   .hero .container {
     padding-left: 0;
     padding-right: 0;
@@ -628,6 +641,10 @@ img {
   }
 }
 
+.design {
+  margin-bottom: 160px;
+}
+
 .design__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -638,14 +655,13 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 160px;
   color: #fff;
 }
 
 .design__left {
   padding: 273px 136px;
   background-color: #ccc;
-  background-image: url("./../../images/web-disign.jpg");
+  background-image: url("./../images/web-disign.jpg");
   background-repeat: no-repeat;
   background-position: center;
   -o-object-position: center;
@@ -656,7 +672,11 @@ img {
   position: relative;
 }
 
-.design__left:hover::before {
+.design__item {
+  position: relative;
+}
+
+.design__box:hover::before {
   content: "";
   position: absolute;
   display: inline-block;
@@ -664,8 +684,8 @@ img {
   left: 0;
   border-radius: 15px;
   opacity: 0.5;
-  width: 541px;
-  height: 640px;
+  width: 100%;
+  height: 100%;
   background-color: #E7816B;
 }
 
@@ -713,12 +733,12 @@ img {
 
 .design__item1 {
   padding: 107px 143px;
-  background-image: url("./../../images/app-design.jpg");
+  background-image: url("./../images/app-design.jpg");
 }
 
 .design__item2 {
   padding: 107px 88px;
-  background-image: url("./../../images/graphic-design.jpg");
+  background-image: url("./../images/graphic-design.jpg");
 }
 
 @media only screen and (max-width: 1150px) {
@@ -771,11 +791,11 @@ img {
   }
   .design__item1 {
     padding: 53px 217px;
-    background-image: url("./../../images/app-design.jpg");
+    background-image: url("./../images/app-design.jpg");
   }
   .design__item2 {
     padding: 53px 162px;
-    background-image: url("./../../images/graphic-design.jpg");
+    background-image: url("./../images/graphic-design.jpg");
   }
 }
 
@@ -811,13 +831,13 @@ img {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .design__left {
-    background-image: url("./../../images/web-disign.jpg") 1x, url("./../../images/web-disign@2x.jpg"), 2x;
+    background-image: url("./../../images/web-disign.jpg") 1x, url("./../images/web-disign@2x.jpg"), 2x;
   }
   .design__item1 {
-    background-image: url("./../../images/app-design.jpg") 1x, url("./../../images/app-design@2x.jpg") 2x;
+    background-image: url("./../../images/app-design.jpg") 1x, url("./../images/app-design@2x.jpg") 2x;
   }
   .design__item2 {
-    background-image: url("./../../images/graphic-design.jpg") 1x, url("./../../images/graphic-design@2x.jpg") 2x;
+    background-image: url("./../../images/graphic-design.jpg") 1x, url("./../images/graphic-design@2x.jpg") 2x;
   }
 }
 

@@ -1,5 +1,10 @@
 .header {
     margin-bottom: 5px;
+    position: fixed;
+    width: 100vw;
+    background-color: $white;
+    box-shadow: 0 1px 10px #ccc;
+    z-index: 9999999;
 
     &__container {
         display: flex;
@@ -60,7 +65,9 @@
 
 .header{
     @media only screen and (max-width:700px) {
-
+        &__container{
+            padding: 35px 0 37px 0;
+        }
         &__nav{
             display: none;
         }
