@@ -2,6 +2,7 @@
     margin-bottom: 180px;
     padding-top: 154px;
 
+
     &__container {
         background-color: $peach;
         padding: 145px 476px 145px 95px;
@@ -11,6 +12,22 @@
         background-repeat: no-repeat;
         background-size: 284px 573px, auto;
         background-position: calc(100% - 96px) calc(100% + 73px), center right;
+        position: relative;
+
+        &::before{
+            content:"";
+            display: inline-block;
+            position: absolute;
+            width: 1006px;
+            height: 594px;
+            background-image: url("./../../images/hero-before.svg");
+            background-repeat: no-repeat;
+            object-position: center;
+            bottom: 0;
+            left: 0;
+            transform: translate(-165px,274px);
+            z-index: -1;
+        }
     }
 
     &__box {
@@ -42,6 +59,10 @@
             padding: 60px 58px 457px 58px;
             min-height: 843px;
             background-position: calc(50%) calc(100% + 169px), calc(100% + 121px) calc(0% + 101px);
+
+            &::before{
+                display: none;
+            }
         }
 
         &__box {

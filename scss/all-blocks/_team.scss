@@ -1,5 +1,27 @@
 .team {
-    margin-bottom: 380px;
+    // margin-bottom: 380px;
+    margin-bottom: 1000px;
+
+    &__container{
+        position: relative;
+
+        // &::before{
+        //     content:"";
+        //     display: inline-block;
+        //     position: absolute;
+        //     width: 1006px;
+        //     height: 594px;
+        //     background-image: url("./../../images/team-before.svg");
+        //     background-repeat: no-repeat;
+        //     object-position: center;
+        //     background-size: cover;
+        //     object-fit: fill;
+        //     right: 0;
+        //     bottom: 0;
+        //     transform: translate(165px, 306px);
+        //     z-index: -1;
+        // }
+    }
 
         &__list {
             display: flex;
