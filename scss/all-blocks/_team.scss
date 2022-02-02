@@ -1,6 +1,6 @@
 .team {
-    // margin-bottom: 380px;
-    margin-bottom: 1000px;
+    margin-bottom: 380px;
+    // margin-bottom: 1000px;
 
     &__container{
         position: relative;
@@ -11,14 +11,12 @@
         //     position: absolute;
         //     width: 1006px;
         //     height: 594px;
-        //     background-image: url("./../../images/team-before.svg");
+        //     background-image: url("./../../images/hero-before.svg");
         //     background-repeat: no-repeat;
         //     object-position: center;
-        //     background-size: cover;
-        //     object-fit: fill;
-        //     right: 0;
         //     bottom: 0;
-        //     transform: translate(165px, 306px);
+        //     right: 0;
+        //     transform: translate(165px,306px) rotate(180deg);
         //     z-index: -1;
         // }
     }
@@ -65,7 +63,7 @@
 
         // tablet devices
         @media only screen and (max-width:720px) {
-            margin-bottom: 67px;
+            margin-bottom: 372px;
 
             &__list {
                 display: flex;
@@ -101,7 +99,7 @@
 
         //Mobile devices
         @media only screen and (max-width: 560px) {
-            margin-bottom: 121px;
+            margin-bottom: 311px;
 
             &__item {
                 display: flex;
