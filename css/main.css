@@ -385,6 +385,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Jost, Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -513,11 +514,59 @@ img {
 @media only screen and (max-width: 700px) {
   .header__container {
     padding: 35px 0 37px 0;
+    left: 0;
+    top: 0;
   }
   .header__nav {
+    position: absolute;
     display: none;
+    top: 100%;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #b87676;
+  }
+  .header--active .header__nav {
+    display: block;
+  }
+  .header__nav-list {
+    top: 0;
+    left: 0;
+    background-color: #000;
+    width: 100vw;
+    padding: 32px 24px;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .header__nav-item {
+    padding: 16px 0;
+  }
+  .header__nav-item + .header__nav-item {
+    margin-left: 0;
+  }
+  .header__nav-link {
+    color: #fff;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: 2px;
   }
   .header__btn {
+    display: block;
+  }
+  .header--active .header__btn .burger-menu {
+    display: none;
+  }
+  .header--active .header__btn .close {
     display: block;
   }
 }
@@ -532,7 +581,7 @@ img {
   padding: 145px 476px 145px 95px;
   min-height: 640px;
   border-radius: 15px;
-  background-image: url("./../../images/phone.png"), url("./../../images/Oval.svg");
+  background-image: url("./../images/phone.png"), url("./../images/Oval.svg");
   background-repeat: no-repeat;
   background-size: 284px 573px, auto;
   background-position: calc(100% - 96px) calc(100% + 73px), center right;
@@ -545,7 +594,7 @@ img {
   position: absolute;
   width: 1006px;
   height: 594px;
-  background-image: url("./../../images/hero-before.svg");
+  background-image: url("./../images/hero-before.svg");
   background-repeat: no-repeat;
   -o-object-position: center;
      object-position: center;
