@@ -2,7 +2,6 @@
     margin-bottom: 180px;
     padding-top: 154px;
 
-
     &__container {
         background-color: $peach;
         padding: 145px 476px 145px 95px;
@@ -51,7 +50,7 @@
 
 
 
-    // tablet devides
+    // tablet devides----------------------------------------------
     @media only screen and (max-width:1100px) {
         margin-bottom: 120px;
 
@@ -87,7 +86,7 @@
 
 
 
-    // mobile devices
+    // mobile devices-------------------------------------------------
     @media only screen and (max-width:640px) {
         padding-top: 98px;
         .container{
@@ -116,7 +115,7 @@
             line-height: 25px;
             margin-bottom: 24px;
         }
-}
+    }
 }
 
 .link {
@@ -137,6 +136,7 @@
     text-align: center;
     min-width: 100px;
     max-width: 300px;
+    transition: all 0.2s ease-in-out;
 
     &:hover{
         background-color: $light-peach;
@@ -153,7 +153,7 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
     .hero{
         &__container{
-             background-image: url("./../../images/phone.png"),  url("./../../images/Oval.svg") 1x, url("./../../images/phone@2x.png"),  url("./../../images/Oval.svg") 2x;
+            background-image: url("./../../images/phone.png"),  url("./../../images/Oval.svg") 1x, url("./../../images/phone@2x.png"),  url("./../../images/Oval.svg") 2x;
         }
     }
 }
