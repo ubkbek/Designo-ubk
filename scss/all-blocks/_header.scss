@@ -1,139 +1,134 @@
 .header {
-    margin-bottom: 5px;
-    position: fixed;
-    width: 100%;
-    background-color: $white;
-    box-shadow: 0 1px 10px #ccc;
-        z-index: 9999999;
+  margin-bottom: 5px;
+  position: fixed;
+  width: 100%;
+  background-color: $white;
+  box-shadow: 0 1px 10px #ccc;
+  z-index: 9999999;
 
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 0;
+  }
+
+  &__logo-link {
+    display: inline-block;
+  }
+
+  &__logo-img {
+    width: 196px;
+    height: 26px;
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav-item + &__nav-item {
+    margin-left: 42px;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: $dark-grey;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 1px $dark-grey;
+    }
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+    object-fit: contain;
+  }
+
+  .close {
+    display: none;
+  }
+}
+
+// mobile devices---------------------------------------------------------
+.header {
+  @media only screen and (max-width: 700px) {
     &__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 64px 0;
+      // position: relative;
+      padding: 35px 0 37px 0;
+      left: 0;
+      top: 0;
     }
 
-    &__logo-link {
-        display: inline-block;
+    &__nav {
+      position: absolute;
+      display: none;
+      top: 100%;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgb(184, 118, 118);
     }
 
-    &__logo-img {
-        width: 196px;
-        height: 26px;
+    &--active &__nav {
+      display: block;
     }
 
     &__nav-list {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+      // display: none;
+      // position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      width: 100vw;
+      padding: 32px 24px;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
     }
 
+    &__nav-item {
+      padding: 16px 0;
+    }
 
     &__nav-item + &__nav-item {
-        margin-left: 42px;
+      margin-left: 0;
     }
 
     &__nav-link {
-        text-decoration: none;
-        color: $dark-grey;
-        font-size: 14px;
-        line-height: 14px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-
-        transition: all 0.2s ease-in-out;
-
-        &:hover{
-            box-shadow: 0 1px $dark-grey;
-        }
+      color: #fff;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 25px;
+      letter-spacing: 2px;
     }
 
-    &__btn{
-        background: none;
-        border: none;
+    &__btn {
+      display: block;
+    }
+
+    &--active &__btn {
+      .burger-menu {
         display: none;
-    }
+      }
 
-    .burger-menu{
+      .close {
         display: block;
-        object-fit: contain;
+      }
     }
-
-    .close{
-        display: none;
-    }
-}
-
-
-// mobile devices---------------------------------------------------------
-.header{
-    @media only screen and (max-width:700px) {
-
-        &__container{
-            // position: relative;
-            padding: 35px 0 37px 0;
-            left: 0;
-            top: 0;
-        }
-
-
-        &__nav{
-            position: absolute;
-            display: none;
-            top: 100%;
-            left: 0;
-            height: 100vh;
-            width: 100vw;
-            background-color: rgb(184, 118, 118);
-        }
-
-        &--active &__nav{
-            display: block;
-        }
-
-        &__nav-list{
-            // display: none;
-            // position: absolute;
-            top: 0;
-            left: 0;
-            background-color: #000;
-            width: 100vw;
-            padding: 32px 24px;
-            top: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-        }
-
-
-        &__nav-item{
-            padding: 16px 0;
-        }
-
-        &__nav-item + &__nav-item {
-            margin-left: 0;
-        }
-
-        &__nav-link{
-            color: #fff;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 25px;
-            letter-spacing: 2px;
-        }
-
-        &__btn{
-            display: block;
-        }
-
-        &--active &__btn{
-            .burger-menu{
-                display: none;
-            }
-
-            .close{
-                display: block;
-            }
-        }
-    }
+  }
 }
