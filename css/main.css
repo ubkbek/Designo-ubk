@@ -1063,7 +1063,7 @@ img {
 }
 
 .footer {
-  background-color: #1D1C1E;
+  background-color: #1d1c1e;
   color: #fff;
 }
 
@@ -1234,13 +1234,13 @@ img {
 }
 
 .footer__sotsial-img:hover path {
-  fill: #FFAD9B;
+  fill: #ffad9b;
 }
 
 .footer__box {
   width: 100%;
   padding: 72px 95px;
-  background-color: #E7816B;
+  background-color: #e7816b;
   border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1257,6 +1257,7 @@ img {
   -o-object-position: center;
      object-position: center;
   position: absolute;
+  background-size: cover;
   -webkit-transform: translateY(-220px);
           transform: translateY(-220px);
   top: 0;
